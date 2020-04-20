@@ -1,0 +1,52 @@
+This program contains the followings methods:
+
+Polynomial(size_t degree).
+Creates a polynomial of degree degree, dynamically allocates an array of size degree + 1 and sets the coefficients to 0.0
+
+Polynomial(size_t degree, const float* coefficients).
+Creates a polynomial of degree degree and with the values of the coefficients in the coefficients array
+
+Polynomial(const Polynomial& other).
+Copy constructor, creates a deep copy of the other polynomial.
+
+~Polynomial.
+Destructor, deallocates the allocated memory.
+
+const Polynomial Sum(const Polynomial& rhs)const.
+Returns a polynomial that will contain the sum of this with rhs. Notice that this operation does not change this.
+
+const Polynomial Subtract(const Polynomial& rhs)const.
+Returns a polynomial that will contain the subtraction of this with rhs. Notice that this operation does not change this.
+
+const Polynomial Minus()const.
+Returns a polynomial that will contain the additive inverse of this. For instance if the polynomial is p = 2x^2 - 2, then p.Minus() would return -2x^2 + 2. Notice that this operation does not change this.
+
+const Polynomial Multiply(const Polynomial& rhs)const.
+Returns a polynomial that will contain the multiplication of this with rhs. Notice that this operation does not change this.
+
+const Polynomial Divide(const Polynomial& rhs)const.
+EXTRA CREDIT. Returns a polynomial that will contain the division of this with rhs. Notice that this operation does not change this. The reminder is lost if there was one.
+
+const Polynomial Derive()const.
+Returns a polynomial that will contain the derivative of this. Notice that this operation does not change this.
+
+float Evaluate(float x)const.
+Returns the value of evaluating the polynomial with value x. Notice that this operation does not change this.
+
+float Integrate(float a, float b)const.
+Returns the value of the definite integral evaluated from a to b. Notice that this operation does not change this.
+
+const Polynomial& operator=(const Polynomial& rhs).
+Assigns the polynomial rhs to this.
+
+string ToString()const.
+Returns a string representation of the polynomial.
+
+bool Equals(const Polynomial& rhs)const.
+Returns true if this is equal to rhs.
+
+ostream& Write(ostream& output)const.
+Writes a polynomial from the output stream.
+
+istream& Read(istream& input).
+Reads a polynomial from the input stream.

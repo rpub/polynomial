@@ -1,3 +1,10 @@
+/*
+    Title:      Lab 1 – unit-test.cpp
+    Purpose:    Test Polynomial Class Methods
+    Author:     Prof. Carlos Arias Arevalo
+    Date:       April 19, 2020
+*/
+
 #include "polynomial.h"
 #include <iostream>
 #include <sstream>
@@ -39,7 +46,6 @@ int main(int argc, char* argv[]){
 	w.Read(answers[4]);
 	x.Read(answers[5]);
 
-
 	float total = 0;
 	if (a.Sum(b).Equals(s)){
 		cout << "\tSUM PASSED " << ++total << endl;
@@ -60,9 +66,9 @@ int main(int argc, char* argv[]){
 	}
 
 	if (a.Derive().Equals(x)){
-		cout << "\tMULTIPLY PASSED " << ++total << endl;
+		cout << "\tDERIVE PASSED " << ++total << endl;
 	}else{
-		cout << "\tMULTIPLY FAILED" << endl;
+		cout << "\tDERIVE FAILED" << endl;
 	}
 
 	if (b.Evaluate(3) == 236.0){
@@ -89,8 +95,6 @@ int main(int argc, char* argv[]){
 		cout << "\tDIVIDE FAILED" << endl;
 	}
 	cout << "UNIT TEST FINAL GRADE = " << (total / 5 * 100) << endl;
-
-
 
 	return 0;
 }

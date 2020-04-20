@@ -1,3 +1,10 @@
+/*
+    Title:      Lab 1 – polynomial.h
+    Purpose:    Define Polynomial Class
+    Author:     Prof. Carlos Arias Arevalo
+    Date:       April 19, 2020
+*/
+
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
 
@@ -15,8 +22,8 @@ public:
 	Polynomial(size_t, const float*);
 	Polynomial(const Polynomial&);
 	~Polynomial();
-	const Polynomial Sum(const Polynomial&)const;
-	const Polynomial Subtract(const Polynomial&)const;
+    const Polynomial Sum(const Polynomial&)const;
+    const Polynomial Subtract(const Polynomial&)const;
 	const Polynomial Minus()const;
 	const Polynomial Multiply(const Polynomial&)const;
 	const Polynomial Divide(const Polynomial&)const;
@@ -28,9 +35,5 @@ public:
 	bool Equals(const Polynomial&)const;
 	ostream& Write(ostream&)const;
 	istream& Read(istream&);
-
 };
-
-
-
 #endif
